@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(243, 242, 241);
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+min-height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10vh;
+flex-direction: column;
+gap: 3vw;
+flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+
+  font-family:sans-serif ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 7vw;
+}
+.bookmark{
+  width: 119px;
+  height: 30px;
+  font-size: 1rem;
+  border-radius: 15px;
+  color: whitesmoke;
+  background-color: rgb(193, 193, 193);
+  box-shadow: 1px 1px 3px 1px rgb(57, 55, 55);
+  border: none;
+}
+
+.bookmark:hover{
+  transition: 0.3s;
+  background-color: rgb(74, 76, 76);
+  cursor: pointer;
+}
+
+.bottom{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1vw;
+}
+input{
+  width: 435px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -1px -1px 3px
+}
+
+input::placeholder{
+  padding-left: 10px;
+}
+input:hover{
+  background-color: aliceblue;
+}
+
+
+.search{
+  width: 75px;
+  height: 32px;
+  font-size: 14px;
+  color: whitesmoke;
+  background-color: rgb(37 36 36);
+  border: none;
+  border-radius: 18px;
+}
+
+.search:hover{
+  background-color: rgb(90, 92, 92);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input:focus{
+  outline: none;
+}
+
+button{
+  box-shadow: 1px 1px 3px 1px rgb(57, 55, 55)
+}
+
+.image-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.img{
+  position: relative;
+}
+
+#book{
+  position: absolute;
+  top: 0;
+}
+
+.stack:hover{
+  transform: scale(1.03);
+  transition: 0.4s;
+  z-index: 100;
 }
